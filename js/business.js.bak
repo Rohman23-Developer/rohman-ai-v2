@@ -1,0 +1,228 @@
+// ======================================
+// Rohman AI v2.6
+// Business Search Engine
+// ======================================
+
+let businessFood = [];
+
+// Memuat database bisnis
+async function loadBusinessDatabase() {
+
+    try {
+
+        const response = await fetch("database/business/makanan.json");
+
+        if (!response.ok) {
+            throw new Error("Database makanan tidak ditemukan.");
+        }
+
+        businessFood = await response.json();
+
+        console.log("Business database berhasil dimuat.");
+
+        return true;
+
+    } catch (error) {
+
+        console.error(error);
+
+        return false;
+
+    }
+
+}
+
+// Menampilkan seluruh ide makanan
+function generateFoodIdeas() {
+
+    if (businessFood.length === 0) {
+        return "Database makanan masih kosong.";
+    }
+
+    let hasil = "🍜 Daftar Ide Bisnis Makanan\n\n";
+
+    for (const item of businessFood) {
+
+        hasil +=
+`📌 ${item.nama}
+
+💰 Modal : ${item.modal}
+🎯 Target : ${item.target}
+📈 Keuntungan : ${item.keuntungan}
+⚠️ Risiko : ${item.risiko}
+
+`;
+
+    }
+
+    return hasil;
+
+}
+
+// Detail bisnis
+function detailBisnis(namaBisnis){
+
+    const item = businessFood.find(data =>
+        data.nama.toLowerCase() === namaBisnis.toLowerCase()
+    );
+
+    if(!item){
+
+        return "❌ Bisnis tidak ditemukan.";
+
+    }
+
+    let alat = "";
+
+    if(item.peralatan){
+
+        alat = item.peralatan.join(", ");
+
+    }
+
+    return `
+📌 ${item.nama}
+
+💰 Modal
+${item.modal}
+
+🎯 Target
+${item.target}
+
+📈 Keuntungan
+${item.keuntungan}
+
+⚠️ Risiko
+${item.risiko}
+
+🛠️ Peralatan
+${alat}
+
+📍 Lokasi
+${item.lokasi || "-"}
+
+🎓 Skill
+${item.skill || "-"}
+
+⏳ Balik Modal
+${item.balikModal || "-"}
+
+💡 Tips
+${item.tips || "-"}
+`;
+
+}
+
+// Menampilkan satu ide secara acak
+function generateRandomFoodIdea() {
+
+    if (businessFood.length === 0) {
+        return "Database makanan masih kosong.";
+    }
+
+    const item = businessFood[
+        Math.floor(Math.random() * businessFood.length)
+    ];
+
+    return `
+🍜 Rekomendasi Ide Bisnis
+
+📌 ${item.nama}
+
+💰 Modal : ${item.modal}
+
+🎯 Target : ${item.target}
+
+📈 Keuntungan : ${item.keuntungan}
+
+⚠️ Risiko : ${item.risiko}
+`;
+
+}
+
+// Mencari bisnis berdasarkan modal
+function cariBisnisBerdasarkanModal(modalUser) {
+
+    let hasil = [];
+
+    for (const item of businessFood) {
+
+        const modal = Number(
+            String(item.modal).replace(/[^0-9]/g, "")
+        );
+
+        if (modal <= modalUser) {
+
+            hasil.push(item);
+
+        }
+
+    }
+
+    if (hasil.length === 0) {
+
+        return "❌ Tidak ditemukan bisnis yang sesuai dengan modal tersebut.";
+
+    }
+
+    let text = "💰 Rekomendasi Bisnis Sesuai Modal\n\n";
+
+    hasil.forEach(item => {
+
+        text +=
+`📌 ${item.nama}
+
+💰 Modal : ${item.modal}
+
+🎯 Target : ${item.target}
+
+📈 Keuntungan : ${item.keuntungan}
+
+⚠️ Risiko : ${item.risiko}
+
+`;
+
+    });
+
+    return text;
+
+}
+
+// Router Business
+function cekBusinessCommand(pesan) {
+
+    pesan = pesan.toLowerCase().trim();
+
+    if (pesan === "/idebisnis makanan") {
+
+        return generateFoodIdeas();
+
+    }
+
+    if (pesan === "/idebisnis random") {
+
+        return generateRandomFoodIdea();
+
+    }
+
+const modalMatch = pesan.match(/^\/idebisnis modal (\d+)$/);
+
+if (modalMatch) {
+
+    return cariBisnisBerdasarkanModal(
+        Number(modalMatch[1])
+    );
+
+}
+
+if(pesan.startsWith("/detail ")){
+
+    return detailBisnis(
+        pesan.replace("/detail ","")
+    );
+
+}
+
+    return null;
+
+}

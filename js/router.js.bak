@@ -1,0 +1,16 @@
+// ======================================
+// Rohman AI v2.6
+// Router Engine
+// ======================================
+
+function router(pesan){
+
+    const businessReply = cekBusinessCommand(pesan);
+
+    if(businessReply){
+        return "ROUTER BERHASIL\n\n" + businessReply;
+    }
+
+    return "ROUTER GAGAL";
+
+}

@@ -82,6 +82,10 @@
     "Promo beli 2 gratis 1"
   ],
 
+  "lokasi": "Dekat sekolah, kampus, pasar",
+
+  "skill": "Mudah",
+
   "targetPenjualan": "50 gelas per hari",
 
   "balikModal": "1 bulan",

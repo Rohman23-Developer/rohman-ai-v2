@@ -1,0 +1,26 @@
+[
+  {
+    "command": "/idebisnis",
+    "title": "Generator Ide Bisnis"
+  },
+  {
+    "command": "/swot",
+    "title": "Analisis SWOT"
+  },
+  {
+    "command": "/marketing",
+    "title": "Strategi Marketing"
+  },
+  {
+    "command": "/businessplan",
+    "title": "Business Plan"
+  },
+  {
+    "command": "/branding",
+    "title": "Branding"
+  },
+  {
+    "command": "/modal",
+    "title": "Perhitungan Modal"
+  }
+]
