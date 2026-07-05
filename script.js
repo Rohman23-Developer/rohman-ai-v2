@@ -8,7 +8,9 @@ const input = document.getElementById("userInput");
 async function mulaiAI(){
 
     const knowledge = await loadKnowledge();
-    const business = await loadBusinessDatabase();
+const business = await loadBusinessDatabase();
+const swot = await loadSwotDatabase();
+const marketing = await loadMarketingDatabase();
 
     if(!knowledge){
         tambahPesan("❌ Knowledge gagal dimuat.","bot");
@@ -20,6 +22,16 @@ async function mulaiAI(){
         return;
     }
 
+    if(!swot){
+    tambahPesan("❌ SWOT database gagal dimuat.","bot");
+    return;
+    }
+    
+    if(!marketing){
+    tambahPesan("❌ Marketing database gagal dimuat.","bot");
+    return;
+    }
+    
     tampilPesanAwal();
 
 }
