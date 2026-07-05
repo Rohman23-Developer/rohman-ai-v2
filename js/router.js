@@ -33,6 +33,13 @@ if(pesan.toLowerCase().startsWith("/marketing ")){
         return businessReply;
     }
 
+    // Finance Engine
+if(pesan.toLowerCase().startsWith("/finance ")){
+    return financePlan(
+        pesan.substring(9).trim()
+    );
+}
+
     // AI Normal
     return balasAI(pesan);
 

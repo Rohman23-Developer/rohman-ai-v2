@@ -11,6 +11,7 @@ async function mulaiAI(){
 const business = await loadBusinessDatabase();
 const swot = await loadSwotDatabase();
 const marketing = await loadMarketingDatabase();
+const finance = await loadFinanceDatabase();
 
     if(!knowledge){
         tambahPesan("❌ Knowledge gagal dimuat.","bot");
@@ -29,6 +30,11 @@ const marketing = await loadMarketingDatabase();
     
     if(!marketing){
     tambahPesan("❌ Marketing database gagal dimuat.","bot");
+    return;
+    }
+    
+    if(!finance){
+    tambahPesan("❌ Finance database gagal dimuat.","bot");
     return;
     }
     

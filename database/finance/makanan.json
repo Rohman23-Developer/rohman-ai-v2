@@ -1,0 +1,23 @@
+[
+  {
+    "nama": "Es Teh Jumbo",
+
+    "modalAwal": "Rp300.000",
+
+    "biayaOperasionalHarian": "Rp120.000",
+
+    "hargaJual": "Rp5.000 / gelas",
+
+    "targetPenjualan": "50 gelas / hari",
+
+    "omzetHarian": "Rp250.000",
+
+    "labaHarian": "Rp130.000",
+
+    "estimasiLabaBulanan": "Rp3.900.000",
+
+    "balikModal": "3 hari",
+
+    "tipsKeuangan": "Pisahkan uang usaha dan uang pribadi. Catat semua pemasukan dan pengeluaran setiap hari."
+  }
+]
