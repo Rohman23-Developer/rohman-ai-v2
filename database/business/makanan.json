@@ -1,0 +1,91 @@
+[
+    {
+        "nama":"Rice Bowl Rumahan",
+        "modal":"Rp1.000.000",
+        "target":"Pelajar dan Karyawan",
+        "keuntungan":"Rp300.000 - Rp1.000.000/bulan",
+        "risiko":"Sedang"
+    },
+    {
+        "nama":"Seblak",
+        "modal":"Rp800.000",
+        "target":"Pelajar",
+        "keuntungan":"Rp500.000 - Rp1.500.000/bulan",
+        "risiko":"Rendah"
+    },
+    {
+        "nama":"Ayam Geprek",
+        "modal":"Rp2.000.000",
+        "target":"Semua Kalangan",
+        "keuntungan":"Rp1.000.000 - Rp3.000.000/bulan",
+        "risiko":"Sedang"
+    },
+    {
+        "nama":"Bakso Bakar",
+        "modal":"Rp1.500.000",
+        "target":"Remaja",
+        "keuntungan":"Rp700.000 - Rp2.000.000/bulan",
+        "risiko":"Sedang"
+    },
+    {
+        "nama":"Kentang Goreng",
+        "modal":"Rp900.000",
+        "target":"Anak muda",
+        "keuntungan":"Rp500.000 - Rp1.500.000/bulan",
+        "risiko":"Rendah"
+    },
+{
+    "nama":"Telur Gulung",
+    "modal":"Rp450.000",
+    "target":"Pelajar",
+    "keuntungan":"Rp400.000 - Rp1.000.000/bulan",
+    "risiko":"Rendah"
+},
+{
+    "nama":"Cilok",
+    "modal":"Rp500.000",
+    "target":"Pelajar",
+    "keuntungan":"Rp400.000 - Rp1.200.000/bulan",
+    "risiko":"Rendah"
+},
+{
+  "nama": "Es Teh Jumbo",
+  "modal": "Rp300.000",
+  "target": "Semua Kalangan",
+  "keuntungan": "Rp300.000 - Rp900.000/bulan",
+  "risiko": "Rendah",
+
+  "peralatan": [
+    "Termos",
+    "Gelas Plastik",
+    "Sedotan",
+    "Cool Box"
+  ],
+
+  "bahan": [
+    "Teh",
+    "Gula",
+    "Es Batu",
+    "Air Mineral"
+  ],
+
+  "langkah": [
+    "Membeli peralatan",
+    "Menyiapkan bahan",
+    "Menentukan lokasi",
+    "Membuka usaha"
+  ],
+
+  "promosi": [
+    "WhatsApp",
+    "Instagram",
+    "Promo beli 2 gratis 1"
+  ],
+
+  "targetPenjualan": "50 gelas per hari",
+
+  "balikModal": "1 bulan",
+
+  "tips": "Utamakan kualitas rasa dan pelayanan."
+}
+]
