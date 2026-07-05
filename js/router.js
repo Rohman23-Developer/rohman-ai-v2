@@ -26,19 +26,26 @@ if(pesan.toLowerCase().startsWith("/marketing ")){
     );
 }
 
+   // Finance Engine
+if(pesan.toLowerCase().startsWith("/finance ")){
+    return financePlan(
+        pesan.substring(9).trim()
+    );
+}
+
+    // Branding Engine
+if(pesan.toLowerCase().startsWith("/branding ")){
+    return brandingPlan(
+        pesan.substring(10).trim()
+    );
+}
+
     // Business Engine
     const businessReply = cekBusinessCommand(pesan);
 
     if(businessReply){
         return businessReply;
     }
-
-    // Finance Engine
-if(pesan.toLowerCase().startsWith("/finance ")){
-    return financePlan(
-        pesan.substring(9).trim()
-    );
-}
 
     // AI Normal
     return balasAI(pesan);

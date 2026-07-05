@@ -12,6 +12,7 @@ const business = await loadBusinessDatabase();
 const swot = await loadSwotDatabase();
 const marketing = await loadMarketingDatabase();
 const finance = await loadFinanceDatabase();
+const branding = await loadBrandingDatabase();
 
     if(!knowledge){
         tambahPesan("❌ Knowledge gagal dimuat.","bot");
@@ -38,6 +39,11 @@ const finance = await loadFinanceDatabase();
     return;
     }
     
+    if(!branding){
+    tambahPesan("❌ Branding database gagal dimuat.","bot");
+    return;
+    }
+
     tampilPesanAwal();
 
 }
