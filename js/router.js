@@ -5,6 +5,12 @@
 
 function router(pesan){
 
+const consultantReply = consultBusiness(pesan);
+
+if(consultantReply){
+    return consultantReply;
+}
+
 // SWOT Engine
 if(pesan.toLowerCase().startsWith("/swot ")){
     return swotBisnis(
