@@ -1,0 +1,23 @@
+[
+  {
+    "question": ["halo", "hai", "assalamualaikum"],
+    "answer": "Halo! 😊 Senang bertemu denganmu."
+  },
+  {
+    "question": ["siapa kamu", "kamu siapa", "namamu siapa"],
+    "answer": "Saya Rohman AI v2, asisten AI buatan Rohman."
+  },
+  {
+    "question": ["terima kasih", "makasih"],
+    "answer": "Sama-sama 😊."
+  },
+  {
+    "question": ["jam"],
+    "answer": "__TIME__"
+  },
+  {
+    "question": ["tanggal"],
+    "answer": "__DATE__"
+  }
+]
+

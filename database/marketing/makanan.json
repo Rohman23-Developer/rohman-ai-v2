@@ -1,0 +1,34 @@
+[
+  {
+    "nama": "Es Teh Jumbo",
+
+    "targetPelanggan": [
+      "Pelajar",
+      "Mahasiswa",
+      "Karyawan",
+      "Masyarakat sekitar"
+    ],
+
+    "mediaPromosi": [
+      "WhatsApp",
+      "Instagram",
+      "TikTok",
+      "Facebook"
+    ],
+
+    "idePromo": [
+      "Beli 2 Gratis 1",
+      "Diskon Grand Opening",
+      "Voucher pelanggan tetap"
+    ],
+
+    "jadwalPosting": [
+      "Senin : Promo Produk",
+      "Rabu : Testimoni Pelanggan",
+      "Jumat : Video Proses Pembuatan",
+      "Minggu : Promo Akhir Pekan"
+    ],
+
+    "tips": "Gunakan foto produk yang menarik, buat video singkat di TikTok, dan balas chat pelanggan dengan cepat."
+  }
+]

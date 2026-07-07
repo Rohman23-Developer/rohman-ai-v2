@@ -1,0 +1,32 @@
+[
+  {
+    "nama": "Es Teh Jumbo",
+
+    "strength": [
+      "Modal kecil",
+      "Mudah dijalankan",
+      "Bahan mudah diperoleh",
+      "Target pasar luas"
+    ],
+
+    "weakness": [
+      "Persaingan tinggi",
+      "Bergantung cuaca",
+      "Margin keuntungan per gelas kecil"
+    ],
+
+    "opportunity": [
+      "Tren minuman kekinian",
+      "Bisa dijual online",
+      "Mudah membuka cabang"
+    ],
+
+    "threat": [
+      "Harga bahan baku naik",
+      "Kompetitor baru",
+      "Perubahan selera konsumen"
+    ],
+
+    "kesimpulan": "Bisnis Es Teh Jumbo sangat cocok untuk pemula karena modalnya rendah, mudah dijalankan, dan memiliki target pasar yang luas. Agar mampu bersaing, fokuslah pada kualitas produk, pelayanan, dan promosi yang konsisten."
+  }
+]

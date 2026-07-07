@@ -8,11 +8,7 @@ const input = document.getElementById("userInput");
 async function mulaiAI(){
 
     const knowledge = await loadKnowledge();
-const business = await loadBusinessDatabase();
-const swot = await loadSwotDatabase();
-const marketing = await loadMarketingDatabase();
-const finance = await loadFinanceDatabase();
-const branding = await loadBrandingDatabase();
+    const business = await loadBusinessDatabase();
 
     if(!knowledge){
         tambahPesan("❌ Knowledge gagal dimuat.","bot");
@@ -22,26 +18,6 @@ const branding = await loadBrandingDatabase();
     if(!business){
         tambahPesan("❌ Business database gagal dimuat.","bot");
         return;
-    }
-
-    if(!swot){
-    tambahPesan("❌ SWOT database gagal dimuat.","bot");
-    return;
-    }
-    
-    if(!marketing){
-    tambahPesan("❌ Marketing database gagal dimuat.","bot");
-    return;
-    }
-    
-    if(!finance){
-    tambahPesan("❌ Finance database gagal dimuat.","bot");
-    return;
-    }
-    
-    if(!branding){
-    tambahPesan("❌ Branding database gagal dimuat.","bot");
-    return;
     }
 
     tampilPesanAwal();
